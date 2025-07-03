@@ -1,0 +1,12 @@
+
+
+Login Details:
+http://localhost/Onlineshoppingportal/shopping/admin/index.php
+For Admin :
+User Name : admin
+Password : Test@123
+
+
+
+sa customer 
+http://localhost/Onlineshoppingportal/shopping/
