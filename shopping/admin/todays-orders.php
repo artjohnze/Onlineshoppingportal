@@ -62,19 +62,20 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 									<br />
 
 							
-			<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display table-responsive" >
+			<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
 									<thead>
 										<tr>
 											<th>#</th>
 											<th> Name</th>
-											<th width="50">Email /Contact no</th>
+											<th >Email /Contact no</th>
 											<th>Shipping Address</th>
 											<th>Product </th>
 											<th>Qty </th>
 											<th>Amount </th>
-											<th>Order Date</th>
+									
 											<th>Action</th>
 											
+
 										
 										</tr>
 									</thead>
@@ -99,7 +100,7 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['productname']);?></td>
 											<td><?php echo htmlentities($row['quantity']);?></td>
 											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
-											<td><?php echo htmlentities($row['orderdate']);?></td>
+									
 											<td>    <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
 											</td>
 											</tr>

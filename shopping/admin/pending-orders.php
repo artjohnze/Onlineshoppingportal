@@ -73,7 +73,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 											<th>Product </th>
 											<th>Qty </th>
 											<th>Amount </th>
-											<th>Order Date</th>
+								
 											<th>Action</th>
 											
 										
@@ -96,7 +96,7 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['productname']);?></td>
 											<td><?php echo htmlentities($row['quantity']);?></td>
 											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
-											<td><?php echo htmlentities($row['orderdate']);?></td>
+											
 											<td>   <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
 											</td>
 											</tr>
@@ -116,7 +116,6 @@ while($row=mysqli_fetch_array($query))
 	</div><!--/.wrapper-->
 
 <?php include('include/footer.php');?>
-
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

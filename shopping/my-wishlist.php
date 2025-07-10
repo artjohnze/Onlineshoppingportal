@@ -13,8 +13,6 @@ if(isset($_GET['del']))
 {
 $query=mysqli_query($con,"delete from wishlist where id='$wid'");
 }
-
-
 if(isset($_GET['action']) && $_GET['action']=="add"){
 	$id=intval($_GET['id']);
 	$query=mysqli_query($con,"delete from wishlist where productId='$id'");
@@ -144,9 +142,9 @@ $num=mysqli_num_rows($rt);
 							<span class="review">( <?php echo htmlentities($num);?> Reviews )</span>
 						</div>
 						<?php } ?>
-						<div class="price">Rs. 
+						<div class="price">₱. 
 							<?php echo htmlentities($row['pprice']);?>.00
-							<span>$900.00</span>
+							<span>₱900.00</span>
 						</div>
 					</td>
 					<td class="col-md-2">

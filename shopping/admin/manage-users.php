@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include('include/config.php');
@@ -62,10 +61,7 @@ if(isset($_GET['del']))
 											<th> Name</th>
 											<th>Email </th>
 											<th>Contact no</th>
-											<th>Shippping Address/City/State/Pincode </th>
-											<th>Billing Address/City/State/Pincode </th>
-											<th>Reg. Date </th>
-										
+											<th>Action</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -75,16 +71,17 @@ $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
 ?>									
-										<tr>
-											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['name']);?></td>
-											<td><?php echo htmlentities($row['email']);?></td>
-											<td> <?php echo htmlentities($row['contactno']);?></td>
-											<td><?php echo htmlentities($row['shippingAddress'].",".$row['shippingCity'].",".$row['shippingState']."-".$row['shippingPincode']);?></td>
-											<td><?php echo htmlentities($row['billingAddress'].",".$row['billingCity'].",".$row['billingState']."-".$row['billingPincode']);?></td>
-											<td><?php echo htmlentities($row['regDate']);?></td>
-											
-										<?php $cnt=$cnt+1; } ?>
+    <tr>
+        <td><?php echo htmlentities($cnt);?></td>
+        <td><?php echo htmlentities($row['name']);?></td>
+        <td><?php echo htmlentities($row['email']);?></td>
+        <td><?php echo htmlentities($row['contactno']);?></td>
+        <td>
+            <a href="edit-user.php?id=<?php echo $row['id']?>" title="Edit User"><i class="icon-edit"></i></a>
+            <a href="manage-users.php?id=<?php echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')" title="Delete User"><i class="icon-remove-sign"></i></a>
+        </td>
+    </tr>
+<?php $cnt=$cnt+1; } ?>
 										
 								</table>
 							</div>
