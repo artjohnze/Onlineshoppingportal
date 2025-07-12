@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2025 at 08:50 AM
+-- Generation Time: Jul 12, 2025 at 11:09 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -63,7 +63,8 @@ CREATE TABLE `category` (
 INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDate`, `updationDate`) VALUES
 (1, 'Programming Languages', 'testinngq', '2025-07-10 14:07:04', '11-07-2025 08:33:05 PM'),
 (2, 'Web Dev', 'web dev', '2025-07-10 14:07:29', '10-07-2025 07:57:02 PM'),
-(3, ' Mobile App ', 'mob dev', '2025-07-10 14:07:49', '10-07-2025 07:57:23 PM');
+(3, ' Mobile App ', 'mob dev', '2025-07-10 14:07:49', '10-07-2025 07:57:23 PM'),
+(11, 'Database', 'test1', '2025-07-12 07:27:33', '12-07-2025 12:57:42 PM');
 
 -- --------------------------------------------------------
 
@@ -81,6 +82,13 @@ CREATE TABLE `orders` (
   `orderStatus` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `userId`, `productId`, `quantity`, `orderDate`, `paymentMethod`, `orderStatus`) VALUES
+(1, 1, '2', 1, '2025-07-12 07:46:02', 'COD', 'Delivered');
+
 -- --------------------------------------------------------
 
 --
@@ -94,6 +102,13 @@ CREATE TABLE `ordertrackhistory` (
   `remark` mediumtext DEFAULT NULL,
   `postingDate` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `ordertrackhistory`
+--
+
+INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDate`) VALUES
+(1, 1, 'Delivered', 's', '2025-07-12 07:46:31');
 
 -- --------------------------------------------------------
 
@@ -152,7 +167,10 @@ INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `product
 (8, 2, 15, 'The Full Stack Developer: Mastering End?to?End Web Development', 'Chris Northwood', 500, 515, 'A full?stack guide—from frontend basics to backend architecture, APIs, databases, and deployment best practices. Includes hands?on projects and CI/CD workflows.', 'Fullstack1_.jpg', 'Fullstack2_.jpg', 'Fullstack3_.jpg', 50, 'In Stock', '2025-07-12 00:22:23', NULL),
 (9, 3, 17, 'Android Programming with Kotlin for Beginners', 'John Horton', 500, 510, 'Learn Android app development from scratch using Kotlin. Covers UI, data, animation, networking, and more through hands?on project-building.', 'Android_.jpg', 'android1.jpg', 'Android2_.jpg', 50, 'In Stock', '2025-07-12 00:31:00', NULL),
 (10, 3, 18, 'Flutter for Beginners – Third Edition\"', 'Packt Publishing (Thomas Bailey & Alessandro Biessek)', 200, 210, '&nbsp;step?by?step guide from Hello World to full-fledged cross?platform Flutter apps using Flutter 3.10+ and Dart 3.x. Covers UI, state, animation, testing, and deployment.', 'flutter1.jpg', 'flutterjpg.jpg', 'flutter2jpg.jpg', 0, 'In Stock', '2025-07-12 04:58:14', NULL),
-(11, 3, 19, 'React Native in Action', 'Manning Publications (Nader Dabit)', 200, 210, 'A practical guide to building cross?platform mobile apps with React Native, covering UI, navigation, state, REST APIs, animations, and deployment through real?world projects.', 'react1.jpg', 'react2.jpg', 'react3_.jpg', 50, 'In Stock', '2025-07-12 06:45:43', NULL);
+(11, 3, 19, 'React Native in Action', 'Manning Publications (Nader Dabit)', 200, 210, 'A practical guide to building cross?platform mobile apps with React Native, covering UI, navigation, state, REST APIs, animations, and deployment through real?world projects.', 'react1.jpg', 'react2.jpg', 'react3_.jpg', 50, 'In Stock', '2025-07-12 06:45:43', NULL),
+(13, 11, 20, 'High Performance MySQL – Optimization, Backups & Replication (4th Ed.)', 'Reilly Media', 200, 210, 'An authoritative, example-rich guide to scaling MySQL', 'mysql1_.jpg', 'mysql2.jpg', 'mysql3_.jpg', 20, 'In Stock', '2025-07-12 08:53:52', NULL),
+(14, 11, 21, 'Learning SQL: Generate, Manipulate, and Retrieve Data', 'Reilly Media (Alan Beaulieu)', 200, 250, 'An essential beginner’s guide to SQL: covers SELECT, INSERT, UPDATE, DELETE, JOINs, schema creation, and data manipulation with clear examples across major SQL platforms.', 'sql1.jpg', 'sql2.jpg', 'sql3_.jpg', 50, 'In Stock', '2025-07-12 08:59:21', NULL),
+(15, 11, 22, 'Database Design for Mere Mortals, 4th Edition', 'Addison?Wesley Professional (Michael J. Hernandez)', 200, 260, '<div style=\"background-color: rgb(1, 22, 39); line-height: 20px;\"><font color=\"#a7dbf7\" face=\"Fira Code, Consolas, Courier New, monospace, Consolas, Courier New, monospace\"><span style=\"font-size: 15px; white-space: pre;\">A practical, step?by?step guide to relational database design—from modeling and normalization to ensuring data integrity and avoiding common pitfalls. Updated for modern relational DBMS.</span></font></div>', 'data1.jpg', 'data2.jpg', 'data3r.jpg', 40, 'In Stock', '2025-07-12 09:06:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -183,7 +201,10 @@ INSERT INTO `subcategory` (`id`, `categoryid`, `subcategory`, `creationDate`, `u
 (15, 2, 'Full Stack dev', '2025-07-11 23:44:01', '12-07-2025 05:49:25 AM'),
 (17, 3, 'Android (Java/Kotlin)', '2025-07-12 00:27:16', NULL),
 (18, 3, 'Flutter', '2025-07-12 00:27:32', NULL),
-(19, 3, 'React Native', '2025-07-12 00:27:48', NULL);
+(19, 3, 'React Native', '2025-07-12 00:27:48', NULL),
+(20, 11, 'MySQL', '2025-07-12 07:28:38', NULL),
+(21, 11, 'SQL for Beginners', '2025-07-12 07:29:01', NULL),
+(22, 11, 'Database Design', '2025-07-12 07:29:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -215,7 +236,11 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 (8, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-11 23:14:12', '12-07-2025 10:38:23 AM', 1),
 (9, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 05:08:30', '12-07-2025 11:35:07 AM', 1),
 (10, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 06:05:25', NULL, 1),
-(11, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 06:21:49', '12-07-2025 12:01:07 PM', 1);
+(11, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 06:21:49', '12-07-2025 12:01:07 PM', 1),
+(12, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 07:36:44', NULL, 1),
+(13, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 07:48:04', NULL, 1),
+(14, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 08:14:30', NULL, 1),
+(15, 'Full@gmail.com', 0x3a3a3100000000000000000000000000, '2025-07-12 09:00:23', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -339,19 +364,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ordertrackhistory`
 --
 ALTER TABLE `ordertrackhistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `productreviews`
@@ -363,19 +388,19 @@ ALTER TABLE `productreviews`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `subcategory`
 --
 ALTER TABLE `subcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
