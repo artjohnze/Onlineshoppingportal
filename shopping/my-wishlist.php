@@ -133,14 +133,7 @@ $num=mysqli_num_rows($rt);
 {
 ?>
 
-						<div class="rating">
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star rate"></i>
-							<i class="fa fa-star non-rate"></i>
-							<span class="review">( <?php echo htmlentities($num);?> Reviews )</span>
-						</div>
+					
 						<?php } ?>
 						<div class="price">₱. 
 							<?php echo htmlentities($row['pprice']);?>.00

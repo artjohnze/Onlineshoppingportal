@@ -105,7 +105,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 								<h3 class="new-product-title pull-left">Featured Products</h3>
 								<ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
 
-									<li><a href="#books" data-toggle="tab">Books</a></li>
+									<li><a href="#books" data-toggle="tab"></a></li>
 									<li><a href="#furniture" data-toggle="tab"></a></li>
 								</ul><!-- /.nav-tabs -->
 							</div>
@@ -139,7 +139,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 															<div class="product-info text-left">
 																<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-																<div class="rating rateit-small"></div>
+										
 																<div class="description"></div>
 
 																<div class="product-price">
@@ -196,7 +196,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 															<div class="product-info text-left">
 																<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-																<div class="rating rateit-small"></div>
+												
 																<div class="description"></div>
 
 																<div class="product-price">
@@ -253,7 +253,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 															<div class="product-info text-left">
 																<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-																<div class="rating rateit-small"></div>
+								
 																<div class="description"></div>
 
 																<div class="product-price">
@@ -306,7 +306,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 										<div class="product-info text-left">
 											<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-											<div class="rating rateit-small"></div>
+									
 											<div class="description"></div>
 
 											<div class="product-price">
@@ -355,7 +355,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 											<div class="product-info text-left">
 												<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-												<div class="rating rateit-small"></div>
+										
 												<div class="description"></div>
 
 												<div class="product-price">
@@ -420,7 +420,8 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 									<div class="col col-xs-6">
 										<div class="product-info">
 											<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
-											<div class="rating rateit-small"></div>
+				
+											
 											<div class="product-price">
 												<span class="price">
 													₱. <?php echo htmlentities($row['productPrice']); ?>

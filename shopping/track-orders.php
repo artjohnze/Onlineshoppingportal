@@ -15,7 +15,6 @@ include('includes/config.php');
 	<meta name="author" content="">
 	<meta name="keywords" content="MediaCenter, Template, eCommerce">
 	<meta name="robots" content="all">
-
 	<title>Track Orders</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">

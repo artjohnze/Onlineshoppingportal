@@ -210,13 +210,13 @@ while ($row=mysqli_fetch_array($ret))
 		
 		<div class="product-info text-left">
 			<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($row['id']);?>"><?php echo htmlentities($row['productName']);?></a></h3>
-			<div class="rating rateit-small"></div>
+	
 			<div class="description"></div>
 
 			<div class="product-price">	
 				<span class="price">
-					Rs. <?php echo htmlentities($row['productPrice']);?>			</span>
-										     <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+			₱ <?php echo htmlentities($row['productPrice']);?>			</span>
+										     <span class="price-before-discount">₱<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
 									
 			</div><!-- /.product-price -->
 			

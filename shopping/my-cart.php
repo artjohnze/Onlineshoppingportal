@@ -191,14 +191,14 @@ if (isset($_POST['shipupdate'])) {
 																																																																																																																																	?></a></h4>
 															<div class="row">
 																<div class="col-sm-4">
-																	<div class="rating rateit-small"></div>
+																
 																</div>
 																<div class="col-sm-8">
 																	<?php $rt = mysqli_query($con, "select * from productreviews where productId='$pd'");
 																	$num = mysqli_num_rows($rt); {
 																	?>
 																		<div class="reviews">
-																			( <?php echo htmlentities($num); ?> Reviews )
+																		
 																		</div>
 																	<?php } ?>
 																</div>

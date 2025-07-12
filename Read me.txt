@@ -10,3 +10,117 @@ Password : Test@123
 
 sa customer 
 http://localhost/Onlineshoppingportal/shopping/
+
+2. Web Development
+Frontend Development
+
+Backend Development
+
+Full Stack Development
+
+HTML & CSS
+
+Web APIs
+
+Laravel
+
+React
+
+Vue.js
+
+Angular
+
+3. Mobile App Development
+Android (Java/Kotlin)
+
+iOS (Swift)
+
+Flutter
+
+React Native
+
+Mobile UI/UX Design
+
+4. Game Development
+Unity (C#)
+
+Unreal Engine (C++)
+
+Godot
+
+Game Design Patterns
+
+5. Software Development
+Software Engineering
+
+Design Patterns
+
+Clean Code
+
+DevOps
+
+Agile & Scrum
+
+Testing & Debugging
+
+6. Data Science & AI
+Machine Learning
+
+Deep Learning
+
+Data Analysis
+
+Python for Data Science
+
+R Programming
+
+TensorFlow & PyTorch
+
+7. Databases
+MySQL
+
+PostgreSQL
+
+MongoDB
+
+Redis
+
+SQL for Beginners
+
+Database Design
+
+8. Cybersecurity
+Ethical Hacking
+
+Network Security
+
+Web Security
+
+Cryptography
+
+Kali Linux
+
+9. Cloud & DevOps
+AWS
+
+Azure
+
+Docker
+
+Kubernetes
+
+Jenkins
+
+Terraform
+
+10. Tools & Technologies
+Git & GitHub
+
+VS Code
+
+Command Line / Terminal
+
+Linux
+
+Bash Scripting
+
